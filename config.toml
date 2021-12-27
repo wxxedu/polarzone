@@ -1,4 +1,4 @@
 baseURL = 'http://polarzone.me/'
 languageCode = 'en-us'
 title = 'PolarZone'
-theme = "papermod"
+theme = "noteworthy"
