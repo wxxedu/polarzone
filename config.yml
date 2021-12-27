@@ -1,0 +1,20 @@
+baseURL: 'http://polarzone.me/'
+languageCode: en-us
+title: PolarZone
+theme: papermod
+
+params:
+    homeInfoParams:
+        Title: 嗨，你好！我是小考拉。很高兴认识你。
+        Content: 我是新加坡国立大学大一的一名学生，我的专业是数学和计算机（Double Major）。这个博客里是我的世界，我会在这里和你分享我的生活与学习心得。哦，再说一遍：真的很高兴认识你！
+    socialIcons:
+        - name: youtube
+          url: "https://www.youtube.com/channel/UChtb1ZKIdUxzGY3yNU_TpNQ"
+        - name: bilibili
+          url: "https://space.bilibili.com/175046641"
+        - name: zhihu
+          url: "https://www.zhihu.com/people/wandering-prince"
+        - name: github
+          url: "https://github.com/wxxedu"
+        - name: wechat
+          url: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzUxMzMxMDc5MA==&scene=124#wechat_redirect"
