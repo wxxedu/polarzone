@@ -114,6 +114,8 @@
 {{- range .AllTranslations -}}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
 {{ end -}}
+<!-- Mathjax Support -->
+{{ partial "mathjax_support.html" . }}
 
 <noscript>
     <style>
