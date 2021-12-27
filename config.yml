@@ -2,11 +2,53 @@ baseURL: 'http://polarzone.me/'
 languageCode: en-us
 title: PolarZone
 theme: papermod
+author:
+  name: 一只叫小考拉的北极熊
+languageCode: en-us, zh-cn
+
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        menu:
+            main:
+                - name: Tags
+                  url: tags
+                  weight: 10
+                - name: Series
+                  url: series
+                  weight: 10
+                - name: Search
+                  url: search
+                  weight: 10
+    cn:
+        languageName: ":cn:"
+        languageAltTitle: 简体中文
+        weight: 2
+        title: 北极圈内
+        menu:
+            main:
+                - name: 标签
+                  url: tags
+                  weight: 10
+                - name: 系列
+                  url: series
+                  weight: 10
+                - name: 搜索
+                  url: search
+                  weight: 10
+        homeInfoParams:
+            Title: 嗨，你好！我是小考拉。很高兴认识你。
+            Content: 我是新加坡国立大学大一的一名学生，我的专业是数学和计算机（Double Major）。这个博客里是我的世界，我会在这里和你分享我的生活与学习心得。哦，再说一遍：真的很高兴认识你！
+
 
 params:
     homeInfoParams:
-        Title: 嗨，你好！我是小考拉。很高兴认识你。
-        Content: 我是新加坡国立大学大一的一名学生，我的专业是数学和计算机（Double Major）。这个博客里是我的世界，我会在这里和你分享我的生活与学习心得。哦，再说一遍：真的很高兴认识你！
+        Title: Hi! My Name is Koala! It's So Nice Meeting You!
+        Content: I am a year 1 student studying math and computer science (Double Major) at National University of Singapore. Here I will share with you my journey in pursuing knowledge and happiness. Oh, I just want to say this again - it's so nice meeting you!
+        ShowCodeCopyButtons: true
+        ShowFullTextinRSS: true
+      
     socialIcons:
         - name: youtube
           url: "https://www.youtube.com/channel/UChtb1ZKIdUxzGY3yNU_TpNQ"
@@ -18,5 +60,20 @@ params:
           url: "https://github.com/wxxedu"
         - name: wechat
           url: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzUxMzMxMDc5MA==&scene=124#wechat_redirect"
-    ShowShareButtons: true
-    ShowReadingTime: true
+        - name: rss
+          url: "index.xml"
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowToc: true
+
+taxonomies:
+    category: categories
+    tag: tags
+    series: series
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
