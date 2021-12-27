@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://polarzone.me/'
 languageCode = 'en-us'
 title = 'PolarZone'
 theme = "papermod"
