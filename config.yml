@@ -18,3 +18,5 @@ params:
           url: "https://github.com/wxxedu"
         - name: wechat
           url: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzUxMzMxMDc5MA==&scene=124#wechat_redirect"
+    ShowShareButtons: true
+    ShowReadingTime: true
