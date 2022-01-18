@@ -6,6 +6,10 @@ series: ["CS2040S"]
 tags: ["CS2040S", "Notes", "Data Structures", "Algorithms", "Binary Search"]
 ---
 
+Module: [CS2040S](../..)
+
+Lecture: [Lecture 03](..)
+
 > Binary search is **HARD**!
 
 ## What is Binary Search?
