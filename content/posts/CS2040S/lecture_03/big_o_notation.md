@@ -71,10 +71,3 @@ Listed below are a set of growth rates, which are increasing from top to bottom.
 | $2^{2n}$       |                 |
 | $n!$           | Factorial       |
 
-## Disclaimer
-
-I titled this series CS2040S because it is the notes that I wrote while taking the [CS2040S Data Structures and Algorithms](https://nusmods.com/modules/CS2040S/data-structures-and-algorithms) at NUS. However, I do not by any means represent the teaching team at NUS (I am only a newbie student taking this course), nor do the contents that I wrote represent what was taught in class. 
-
-I wrote these notes and published them on my blog because I am a strong believer in the [Feymann Method](https://en.wikipedia.org/wiki/Learning_by_teaching). I do believe that by writing down my understanding of the course content could help me learn better. Hence, the only relevance to the CS2040S course is that I would try to explain the topics covered in the course using my own language. While writing, I would try my best to share with you my thought processes while learning these contents. 
-
-It should also be reminded that, because I am a newbie to algorithms and data structures, I cannot guarentee that what I wrote are 100% correct and accurate. If you were to refer to my own blog, please use it at your own discretion. It would be hugely appreciated if you could [email](mailto:xiuxuan.wang@u.nus.edu) me the mistakes if you happen to find some. 

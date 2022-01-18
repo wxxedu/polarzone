@@ -154,11 +154,3 @@ class BinarySearch {
 3. Because we rounded down when calculating `middle`, it means that `middle` will always represent the index of the last item in the first part of the array. Hence, we need to add 1.
 
 4. If `key` is less than the value at `middle`, it means that `key` is in the first part of the array. Hence, we set the end to `middle`.
-
-## Disclaimer
-
-I titled this series CS2040S because it is the notes that I wrote while taking the [CS2040S Data Structures and Algorithms](https://nusmods.com/modules/CS2040S/data-structures-and-algorithms) at NUS. However, I do not by any means represent the teaching team at NUS (I am only a newbie student taking this course), nor do the contents that I wrote represent what was taught in class. 
-
-I wrote these notes and published them on my blog because I am a strong believer in the [Feymann Method](https://en.wikipedia.org/wiki/Learning_by_teaching). I do believe that by writing down my understanding of the course content could help me learn better. Hence, the only relevance to the CS2040S course is that I would try to explain the topics covered in the course using my own language. While writing, I would try my best to share with you my thought processes while learning these contents. 
-
-It should also be reminded that, because I am a newbie to algorithms and data structures, I cannot guarentee that what I wrote are 100% correct and accurate. If you were to refer to my own blog, please use it at your own discretion. It would be hugely appreciated if you could [email](mailto:xiuxuan.wang@u.nus.edu) me the mistakes if you happen to find some. 
