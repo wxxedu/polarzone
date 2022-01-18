@@ -1,5 +1,5 @@
 ---
-title: "cs2040s_lec01_big_o_notation"
+title: "CS2040S Lecture Notes"
 date: 2022-01-18T15:40:47+08:00
 draft: false
 series: "CS2040S"
@@ -9,9 +9,11 @@ tags: ["CS2040S", "Notes"]
 # Lecture 03 - Big O Notation
 
 We use big O notation to denote the complexities of growths of certain things. Specifically, in the context of computer algorithms, we use big O notations to measure the time complexities. Below is a function:
+
 $$
 f(x) = x^3+2x^2+3x+1
 $$
+
 suppose that we want to learn about the order of growth of the function above. We would quickly realize one thing: as $x$ gets greater and greater, the $x^3$ seemed to become the component that contributes the most to the function's growth, whereas the other components have a less and less contribution. Say, when $x=10$
 
 $$
@@ -51,20 +53,3 @@ And we also have Theta ($\Theta$) notation, which fits most people's perception 
 ## Growth Rates
 
 Listed below are a set of growth rates, which are increasing from top to bottom. 
-
-| Function       | Name            |
-| -------------- | --------------- |
-| $5$            | Constant        |
-| $\log\log (n)$ | Double Log      |
-| $\log (n)$     | Logarithmic     |
-| $\log^{2}(n)$  | Polylogarithmic |
-| $n$            | Linear          |
-| $n\log(n)$     | Log-linear      |
-| $n^{3}$        | Polynomial      |
-| $n^{3}\log(n)$ |                 |
-| $n^{4}$        | Polynomial      |
-| $2^{n}$        | Exponential     |
-| $2^{2n}$       |                 |
-| $n!$           | Factorial       |
-
-
