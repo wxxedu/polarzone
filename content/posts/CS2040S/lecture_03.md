@@ -6,7 +6,7 @@ series: ["CS2040S"]
 tags: ["CS2040S", "Notes", "Data Structures", "Algorithms"]
 ---
 
-This lecture discusses the [Big-O Notation](./lecture_03/big_o_notation) and [Binary Search](./lecture_03/binary_search).
+This lecture discusses the [Big-O Notation](./big_o_notation) and [Binary Search](./binary_search).
 
 ## [Big-O Notation](./big_o_notation)
 
