@@ -20,7 +20,7 @@ We begin by dividing the list into two parts, which is $1$ to $5$ and $6$ to $10
 
 $$
 \begin{align*}
-\text{List1} &= [1, 2, 3, 4, 5]\\
+\text{List1} &= [1, 2, 3, 4, 5] \\\\
 \text{List2} &= [6, 7, 8, 9, 10]
 \end{align*}
 $$
@@ -33,7 +33,7 @@ So now, we shall look into the second list, which is $[6, 7, 8, 9, 10]$. Similar
 
 $$
 \begin{align*}
-\text{List2-1}&=[6,7,8]\\
+\text{List2-1}&=[6,7,8]\\\\
 \text{List2-2}&=[9,10]
 \end{align*}
 $$
@@ -44,7 +44,7 @@ Here, we then go on to explore the first list, i.e. $\text{List2-1}$:
 
 $$
 \begin{align*}
-\text{List2-1-1}&=[6,7]\\
+\text{List2-1-1}&=[6,7]\\\\
 \text{List2-1-2}&=[8]
 \end{align*}
 $$
@@ -55,7 +55,7 @@ We should still abide by the rules that we set in the beginning: if $7$ is less 
 
 $$
 \begin{align*}
-\text{List2-1-1-1}&=[6]\\
+\text{List2-1-1-1}&=[6]\\\\
 \text{List2-1-1-2}&=[7]
 \end{align*}
 $$
