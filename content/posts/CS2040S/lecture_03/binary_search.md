@@ -1,5 +1,5 @@
 ---
-title: "CS2040S Lecture 03 Notes - Binary Search"
+title: "Binary Search"
 date: 2022-01-18T17:34:18+08:00
 draft: false
 series: ["CS2040S"]

@@ -1,5 +1,5 @@
 ---
-title: "CS2040S Lecture 03 Notes - Big O Notation"
+title: "Big O Notation"
 date: 2022-01-18T15:40:47+08:00
 draft: false
 series: ["CS2040S"]
