@@ -1,5 +1,5 @@
 ---
-title: "Lec03 - Big O Notation"
+title: "cs2040s_lec01_big_o_notation"
 date: 2022-01-18T15:40:47+08:00
 draft: false
 series: "CS2040S"
