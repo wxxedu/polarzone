@@ -1,0 +1,6 @@
+table {
+    /* make this table full width */
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
