@@ -1,12 +1,10 @@
 ---
-title: "CS2040S_Lecture_03_Binary_Search"
+title: "CS2040S Lecture 03 Notes - Binary Search"
 date: 2022-01-18T17:34:18+08:00
 draft: false
 series: ["CS2040S"]
 tags: ["CS2040S", "Notes", "Data Structures", "Algorithms", "Binary Search"]
 ---
-
-# Lecture 03 - Binary Search
 
 > Binary search is **HARD**!
 

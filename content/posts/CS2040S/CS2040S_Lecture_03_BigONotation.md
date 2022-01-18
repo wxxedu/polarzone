@@ -1,9 +1,9 @@
 ---
-title: "CS2040S Lecture Notes - Big O Notation"
+title: "CS2040S Lecture 03 Notes - Big O Notation"
 date: 2022-01-18T15:40:47+08:00
 draft: false
 series: ["CS2040S"]
-tags: ["CS2040S", "Notes"]
+tags: ["CS2040S", "Notes", "Data Structures", "Algorithms"]
 ---
 
 We use big O notation to denote the complexities of growths of certain things. Specifically, in the context of computer algorithms, we use big O notations to measure the time complexities. Below is a function:
