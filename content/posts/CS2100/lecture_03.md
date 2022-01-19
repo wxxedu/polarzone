@@ -6,6 +6,8 @@ series: ["CS2100"]
 tags: ["CS2100", "Computer Organization"]
 ---
 
+Module: [CS2100](..)
+
 Discussed how to represent the four basic data types in C:
 
 - Integer
@@ -13,4 +15,4 @@ Discussed how to represent the four basic data types in C:
 - Char
 - Double
 
-For detailed notes, see ![data representation](./data_representation).
+For detailed notes, see [data representation](./data_representation).
