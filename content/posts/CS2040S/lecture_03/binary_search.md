@@ -24,7 +24,7 @@ We begin by dividing the list into two parts, which is $1$ to $5$ and $6$ to $10
 
 $$
 \begin{align*}
-\text{List1} &= [1, 2, 3, 4, 5] \\
+\text{List1} &= [1, 2, 3, 4, 5] \\\\
 \text{List2} &= [6, 7, 8, 9, 10]
 \end{align*}
 $$
