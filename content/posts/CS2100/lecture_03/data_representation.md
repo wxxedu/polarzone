@@ -1,5 +1,5 @@
 ---
-title: "Data_representation"
+title: "Data Representation"
 date: 2022-01-19T16:00:23+08:00
 draft: false
 series: ["CS2100"]
