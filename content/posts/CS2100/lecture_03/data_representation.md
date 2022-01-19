@@ -35,15 +35,18 @@ However, there are more systems than the decimal system. As you probably know, t
 Just like the expression above, we can convert other systems to the decimal system using the formula:
 
 $$
-\text{Number}_{10}=\sum\limits^{}_{\substack{i=\text{index}\\\\\text{starting from}\\\\\text{decimal point}}}{}\text{Number}_{R}[i]\times R^{i}
+\text{Number}_{10}=\sum\text{Number}_{R}[i]\times R^{i}
 $$
+
+Note that $i$ starts from the decimal point to the left. 
 
 For example, if we have number 10101101, we can convert it to the decimal system like this:
 
 $$
 \begin{align*}
-&10101101_{2}\\=&1\times 2^{7}+0\times 2^{6}+1\times 2^{5}+0\times 2^{4}\\ &+1\times 2^{3}+1\times 2^{2}+0\times 2^{1}+1\times 2^{0}\\
-=& 128 + 32  + 8 + 4 + 1\\
+&10101101_{2}\\\\ 
+=&1\times 2^{7}+0\times 2^{6}+1\times 2^{5}+0\times 2^{4}\\\\ &+1\times 2^{3}+1\times 2^{2}+0\times 2^{1}+1\times 2^{0}\\\\
+=& 128 + 32  + 8 + 4 + 1\\\\
 =&173_{10}
 \end{align*}
 $$
@@ -208,5 +211,5 @@ Note that because the binary will always start with 1, we don't have to include 
 The exponent portion should  represent $3$. Because it is in excess notation and has an excess of 127, we need to add 3 to 127 which is 130, and convert it to binary. In this case, it is $1000 0010$. Here, the entire floating point representation for this should be:
 
 $$
-\color{green}\underbrace{0}_{\text{Sign Bit}}\color{orange}\underbrace{10000010}_{\text{Exponent}}\color{blue}\underbrace{00101 00000 00000 00000 000}_{\text{Mantissa}}
+\underbrace{0}_{\text{Sign Bit}}\underbrace{10000010}_{\text{Exponent}}\underbrace{00101 00000 00000 00000 000}_{\text{Mantissa}}
 $$
