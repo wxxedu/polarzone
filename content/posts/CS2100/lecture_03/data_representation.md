@@ -35,7 +35,7 @@ However, there are more systems than the decimal system. As you probably know, t
 Just like the expression above, we can convert other systems to the decimal system using the formula:
 
 $$
-\text{Number}_{10}=\sum\text{Number}_{R}[i]\times R^{i}
+\text{Number}\_{10}=\sum\text{Number}\_{R}[i]\times R^{i}
 $$
 
 Note that $i$ starts from the decimal point to the left. 
@@ -211,5 +211,5 @@ Note that because the binary will always start with 1, we don't have to include 
 The exponent portion should  represent $3$. Because it is in excess notation and has an excess of 127, we need to add 3 to 127 which is 130, and convert it to binary. In this case, it is $1000 0010$. Here, the entire floating point representation for this should be:
 
 $$
-\underbrace{0}_{\text{Sign Bit}}\underbrace{10000010}_{\text{Exponent}}\underbrace{00101 00000 00000 00000 000}_{\text{Mantissa}}
+01000001000101 00000 00000 00000 000
 $$
