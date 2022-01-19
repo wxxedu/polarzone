@@ -70,7 +70,7 @@ By the similar token, if we compare $7$ to the middle value, which, in this case
 
 ## Writing Some Code
 
-### Recursion??? NO!
+### Recursion~~??? NO!~~
 
 So, how are we going to actually implement this in code? Intuitively, we could use **recursion** to divide up the lists just like what we did by hand. Below is an example in Java. 
 
@@ -119,9 +119,13 @@ class BinarySearch {
 
 > Well, what are the problems with using recursions, then?
 
-To begin with, while using recursions, we started manipulating arrays, i.e. finding the **subarray** of the list. It turns out that this operation is **really inefficient**! The copying action would itself cost $O(n)$, which demolishes all the advantages of using binary search!
+~~To begin with, while using recursions, we started manipulating arrays, i.e. finding the **subarray** of the list. It turns out that this operation is **really inefficient**! The copying action would itself cost $O(n)$, which demolishes all the advantages of using binary search!~~
+
+$\uparrow$ **Nevermind, I was so stupid.**
 
 Secondly (but not as important), it is just such a mess writing the code for the recursion using recursion. Because in each recursive call, we could only view the given portion of the list, we have to calculate the index at the given point. It may lead to a lot of potential mistakes.
+
+[**UPDATE Jan 19, 2022] The problem with the approach above is that we literally divided up the lists. Instead, it would be nice if we didn't divide up the lists, but uses the indexes to indicate the start and the end of the list that we are looking at.** 
 
 ### Iteration? Yes!
 
