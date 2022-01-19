@@ -6,8 +6,9 @@ series: ["CS2100"]
 tags: ["CS2100", "Computer Organization", "Binary", "Data Representation", "ASCII"]
 ---
 
+Module: [CS2100](../..)
 
-# Lecture 03 - Data Representation
+Lecture: [Lecture 03](..)
 
 There are four basic data types in C. Namely, they are:
 
@@ -33,7 +34,9 @@ However, there are more systems than the decimal system. As you probably know, t
 
 Just like the expression above, we can convert other systems to the decimal system using the formula:
 
-$$\text{Number}_{10}=\sum\limits^{}_{\substack{i=\text{index}\\\\\text{starting from}\\\\\text{decimal point}}}{}\text{Number}_{R}[i]\times R^{i}$$
+$$
+\text{Number}_{10}=\sum\limits^{}_{\substack{i=\text{index}\\\\\text{starting from}\\\\\text{decimal point}}}{}\text{Number}_{R}[i]\times R^{i}
+$$
 
 For example, if we have number 10101101, we can convert it to the decimal system like this:
 
@@ -47,7 +50,9 @@ $$
 
 This formula works for other systems as well. Say, if you have 74 in an oxadecimal system, and you want to convert it to the decimal system, you simply do this:
 
-$$74_{8}=7\times 8^{1}+4\times 8^{0}=60_{10}$$
+$$
+74_{8}=7\times 8^{1}+4\times 8^{0}=60_{10}
+$$
 
 ### Conversions From Decimal
 
@@ -134,7 +139,9 @@ Recall how we represent the decimal numbers, we put an optional `+` sign in fron
 
 The sign and magnitude way of representation uses a similar approach here. It uses the first bit (the most significant bit) to represent the sign. By convention, we use 1 to represent negative numbers and 0 to represent positive numbers. Hence, the number -127 could be represented by:
 
-$$\color{red}{1}\color{black}1111111$$
+$$
+\color{red}{1}\color{black}1111111
+$$
 
 the first 1 is marked red because it represents the negation sign, whereas the remaining 7 1s represent the number 127.
 
@@ -186,14 +193,20 @@ For example, if we were to represent 17.25 in the floating point number, we firs
 
 Then, we need to figure out the mantisa and the exponent. 17.25 when converted to binary is 10001.01. Here, 
 
-$$1001.01_{2}=1.00101_{2}\times 2^{3}$$
+$$
+1001.01_{2}=1.00101_{2}\times 2^{3}
+$$
 
 Hence, the mantisa of this starts with $00101$, and should be 
 
-$$00101 00000 00000 00000 00$$
+$$
+00101 00000 00000 00000 00
+$$
 
 Note that because the binary will always start with 1, we don't have to include that first 1, and we only need the decimal portions of the binary. 
 
 The exponent portion should  represent $3$. Because it is in excess notation and has an excess of 127, we need to add 3 to 127 which is 130, and convert it to binary. In this case, it is $1000 0010$. Here, the entire floating point representation for this should be:
 
-$$\color{green}\underbrace{0}_{\text{Sign Bit}}\color{orange}\underbrace{10000010}_{\text{Exponent}}\color{blue}\underbrace{00101 00000 00000 00000 000}_{\text{Mantissa}}$$
+$$
+\color{green}\underbrace{0}_{\text{Sign Bit}}\color{orange}\underbrace{10000010}_{\text{Exponent}}\color{blue}\underbrace{00101 00000 00000 00000 000}_{\text{Mantissa}}
+$$
