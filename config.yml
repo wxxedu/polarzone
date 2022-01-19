@@ -44,7 +44,7 @@ languages:
 
 params:
     homeInfoParams:
-        Title: Hi! My Name is Koala! It's So Nice Meeting You!
+        Title: Hi! I am Koala! It's So Nice Meeting You!
         Content: I am a year 1 student studying math and computer science (Double Major) at National University of Singapore. Here I will share with you my journey in pursuing knowledge and happiness. Oh, I just want to say this again - it's so nice meeting you!
         ShowCodeCopyButtons: true
         ShowFullTextinRSS: true
