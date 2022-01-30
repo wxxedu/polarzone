@@ -8,7 +8,7 @@ tags: ["CS2040S", "Notes", "Data Structures", "Algorithms"]
 
 Module: [CS2040S](...)
 
-Lecture: [Lecture 03](..)
+Week: [Week 02](..)
 
 We use big O notation to denote the complexities of growths of certain things. Specifically, in the context of computer algorithms, we use big O notations to measure the time complexities. Below is a function:
 
