@@ -163,14 +163,10 @@ $$t=\log_{\frac{4}{3}}n$$
 
 Because we know that the bases in logarithmic functions don't realy matter ($\log_{a}b=(\log_{2}b/\log_{2}a)$, $\log_{2}a$ is a constant), we shall know that the order of growth of the number of levels is $O(\log n)$. Hence, the time complexity for the algorithm is $O(n\log n)$.
 
-## 4. Boundry Condition
+## 4. Duplicates
 
 **[To Be Completed]**
 
-## 5. Duplicates
-
-**[To Be Completed]**
-
-## 6. Code Implementation
+## 5. Code Implementation
 
 **[To Be Completed]**
