@@ -1,5 +1,5 @@
 ---
-title: "QuickSort"
+title: "Quick Sort"
 date: 2022-02-07T23:16:11+08:00
 draft: false
 series: ["CS2040S"]
@@ -103,7 +103,7 @@ Now that we have successly permutated the list such that the portion on the left
 
 Now, assume that we have the best scenario here. Suppose that every time when we pick something, we find the exact middle point of the sublist. Then, the sorting time complexity would look something like this:
 
-![QuickSort Best Case Time Complexity Diagram](/static/CS2040S/quick-sort-best-case.png)
+![QuickSort Best Case Time Complexity Diagram](/static/CS2040S/quick-sort-best-case.svg)
 
 We realize that the time complexity here would be $n\log n$, because the tree is of depth $\log n$ and for each iteration it would take $n$ total iterations to conduct the partition. Therefore, we shall find the best case time-complexity of the QuickSort algorithm is $\Omega(n\log n)$.
 
@@ -149,7 +149,7 @@ Now, if we were to make sure that the pivot was in the middle 50\%, on average, 
 
 Assume that we are getting the worst pivot in this case each time, i.e. for each time we are getting the pivot that is exactly the 75\% if we ranked the numbers from small to large, then we would have the following tree:
 
-![Paranoid QuickSort Analysis](/static/CS2040S/paranoid-quick-sort-analysis.png)
+![Paranoid QuickSort Analysis](/static/CS2040S/paranoid-quick-sort-time-complexity.svg)
 
 **[To Be Completed]**
 
