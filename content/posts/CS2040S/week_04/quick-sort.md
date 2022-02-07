@@ -151,7 +151,17 @@ Assume that we are getting the worst pivot in this case each time, i.e. for each
 
 ![Paranoid QuickSort Analysis](/static/CS2040S/paranoid-quick-sort-time-complexity.svg)
 
-**[To Be Completed]**
+Now, if we take a look at this tree. On every level, we are having a total of $n$ operations. The problem here is to figure out how many levels are there.
+
+To figure that out, we should be focusing on the longest path, which, in this case, is the following path marked in green:
+
+![Paranoid QuickSort Analysis (Highlighted)](/static/CS2040S/paranoid-quick-sort-time-complexity-highlighted.svg)
+
+we notice that on each iteration, the number of elements becomes $3/4$ of its parent. Therefore, if we start from the bottom of the tree, which has 1 element, and we go up, we would each time increase the element number by $4/3$. Hence, we have the function $(4/3)^{t}=n$, where $t$ is the number of levels that we are interested to know. Expressed in logarithmic terms, we have:
+
+$$t=\log_{\frac{4}{3}}n$$
+
+Because we know that the bases in logarithmic functions don't realy matter ($\log_{a}b=(\log_{2}b/\log_{2}a)$, $\log_{2}a$ is a constant), we shall know that the order of growth of the number of levels is $O(\log n)$. Hence, the time complexity for the algorithm is $O(n\log n)$.
 
 ## 4. Boundry Condition
 
