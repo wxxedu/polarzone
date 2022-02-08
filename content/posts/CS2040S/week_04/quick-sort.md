@@ -6,13 +6,13 @@ series: ["CS2040S"]
 tags: ["CS2040S", "Notes", "Data Structures", "Algorithms", "Sorting"]
 ---
 
-# QuickSort
-
 ## 1. Idea Walkthrough
 
-### 1.1. Idea of QuickSort
+### 1.1. Idea of Quick Sort
 
-The idea of QuickSort can be described in the following procedure:
+The idea of Quick Sort is that we divide a list into three parts, the middle part consists of elements of the same value, which we call pivots, the left part consists of elements that have smaller value than the pivots, and the right part consists of elements that have larger value than the pivots. 
+
+Quick Sort can be described in the following procedure:
 
 1. find a pivot point number
 2. for each pivot point number, iterate through the list such that numbers smaller than the pivot number is on the left of the pivot number, and numbers bigger than the pivot number is on the right of the pivot number
@@ -103,17 +103,17 @@ Now that we have successly permutated the list such that the portion on the left
 
 Now, assume that we have the best scenario here. Suppose that every time when we pick something, we find the exact middle point of the sublist. Then, the sorting time complexity would look something like this:
 
-![QuickSort Best Case Time Complexity Diagram](/static/CS2040S/quick-sort-best-case.svg)
+![Quick Sort Best Case Time Complexity Diagram](/static/CS2040S/quick-sort-best-case.svg)
 
-We realize that the time complexity here would be $n\log n$, because the tree is of depth $\log n$ and for each iteration it would take $n$ total iterations to conduct the partition. Therefore, we shall find the best case time-complexity of the QuickSort algorithm is $\Omega(n\log n)$.
+We realize that the time complexity here would be $n\log n$, because the tree is of depth $\log n$ and for each iteration it would take $n$ total iterations to conduct the partition. Therefore, we shall find the best case time-complexity of the Quick Sort algorithm is $\Omega(n\log n)$.
 
 ## 3. Pivot Points
 
-From the discussion of the time complexity above, we realize one thing: *the efficiency of the QuickSort algorithm depends on the pivot point picked*. 
+From the discussion of the time complexity above, we realize one thing: *the efficiency of the Quick Sort algorithm depends on the pivot point picked*. 
 
 ### 3.1. Naively Picking a Pivot Point
 
-To further convey this idea, if we just naively choose a pivot point, say, always picking the first element as the pivot point, then we would encounter huge problems with the QuickSort. Suppose that we were to deal with the following list of numbers:
+To further convey this idea, if we just naively choose a pivot point, say, always picking the first element as the pivot point, then we would encounter huge problems with the Quick Sort. Suppose that we were to deal with the following list of numbers:
 
 ```
 10 9 8 7 6 5 4 3 2 1
@@ -131,9 +131,9 @@ After this, if we would pick 9 as the pivot point, which would result in
 8 7 6 5 4 3 2 1 9 10
 ```
 
-so on and so forth, it would take us n iterations to finish sorting the list. Therefore, the time complexity of this thing would be $O(n^{2})$. This is EXTREMELY SLOW. But wait, isn't this thing called QuickSort? 
+so on and so forth, it would take us n iterations to finish sorting the list. Therefore, the time complexity of this thing would be $O(n^{2})$. This is EXTREMELY SLOW. But wait, isn't this thing called Quick Sort? 
 
-Well, in most cases, the QuickSort algorithm would have good performance. So, technically, it is still "quick." But to solve issues where the QuickSort would take an astronomically long time, we could actually **pick pivot points at random**. 
+Well, in most cases, the Quick Sort algorithm would have good performance. So, technically, it is still "quick." But to solve issues where the Quick Sort would take an astronomically long time, we could actually **pick pivot points at random**. 
 
 ### 3.2. Randomized Algorithm
 
@@ -143,19 +143,19 @@ Instead of assigning a fixed way of picking a pivot point, we can pick a pivot p
 
 To fully illustrate this point, when we randomly pick a number from the list, we assume that it is in the middle 50\%, i.e. if the list is sorted, the item would be between 25\% to the 75\% of the list. 
 
-Now, to make sure that this situation happens, we add the following procedure in the list. When we partition the list, if we find out that the pivot that we picked is not in the middle 50\% of the list, we shall redo the partitioning until this condition if satisfied. Note that this is not necessary at all for writing the QuickSort algorithm, and we make this modication for ease of analysis. 
+Now, to make sure that this situation happens, we add the following procedure in the list. When we partition the list, if we find out that the pivot that we picked is not in the middle 50\% of the list, we shall redo the partitioning until this condition if satisfied. Note that this is not necessary at all for writing the Quick Sort algorithm, and we make this modication for ease of analysis. 
 
 Now, if we were to make sure that the pivot was in the middle 50\%, on average, it would take us 2 tries to get the correct pivot point. 
 
 Assume that we are getting the worst pivot in this case each time, i.e. for each time we are getting the pivot that is exactly the 75\% if we ranked the numbers from small to large, then we would have the following tree:
 
-![Paranoid QuickSort Analysis](/static/CS2040S/paranoid-quick-sort-time-complexity.svg)
+![Paranoid Quick Sort Analysis](/static/CS2040S/paranoid-quick-sort-time-complexity.svg)
 
 Now, if we take a look at this tree. On every level, we are having a total of $n$ operations. The problem here is to figure out how many levels are there.
 
 To figure that out, we should be focusing on the longest path, which, in this case, is the following path marked in green:
 
-![Paranoid QuickSort Analysis (Highlighted)](/static/CS2040S/paranoid-quick-sort-time-complexity-highlighted.svg)
+![Paranoid Quick Sort Analysis (Highlighted)](/static/CS2040S/paranoid-quick-sort-time-complexity-highlighted.svg)
 
 we notice that on each iteration, the number of elements becomes $3/4$ of its parent. Therefore, if we start from the bottom of the tree, which has 1 element, and we go up, we would each time increase the element number by $4/3$. Hence, we have the function $(4/3)^{t}=n$, where $t$ is the number of levels that we are interested to know. Expressed in logarithmic terms, we have:
 
