@@ -6,6 +6,8 @@ series: ["CS2040S"]
 tags: ["CS2040S", "Notes", "Data Structures", "Algorithms", "Sorting"]
 ---
 
+> I apologize for the poor quality of this article. To be honest, writing this article was a huge mess. I spent a lot of time writing the article, but then realized that I didn't really get the details right, or at least easy to be implemented in code. After spending hours debugging my code, I realized that quick sort is actually all about details. I will probably rewrite large portions of this article when I have more time, and explain the boundary conditions more clearly.
+
 ## 1. Idea Walkthrough
 
 ### 1.1. Idea of Quick Sort
@@ -163,11 +165,141 @@ $$t=\log_{\frac{4}{3}}n$$
 
 Because we know that the bases in logarithmic functions don't realy matter ($\log_{a}b=(\log_{2}b/\log_{2}a)$, $\log_{2}a$ is a constant), we shall know that the order of growth of the number of levels is $O(\log n)$. Hence, the time complexity for the algorithm is $O(n\log n)$.
 
-## 4. Duplicates
+## 4. Code
+
+### 4.1. Python 
+
+```python
+from random import Random
+
+randint = Random().randint
+
+def quick_sort(lst):
+    _quick_sort(lst, 0, len(lst) - 1)
+
+def _quick_sort(lst, start_i, end_i):
+    if start_i > end_i  - 1:
+        return
+    pivot_i = _partition(lst, start_i, end_i)
+    _quick_sort(lst, start_i, pivot_i - 1)
+    _quick_sort(lst, pivot_i + 1, end_i)
+
+def _partition(lst, start_i, end_i):
+    pivot_i = Random().randint(start_i, end_i)
+    # swap the pivot point into the front
+    pivot = lst[pivot_i]
+    lst[pivot_i] = lst[start_i]
+    lst[start_i] = pivot
+    while (start_i < end_i):
+        while (start_i < end_i and lst[start_i + 1] <= pivot):
+            start_i += 1
+            lst[start_i-1] = lst[start_i]
+            lst[start_i] = pivot
+        while (start_i < end_i and lst[end_i] >= pivot):
+            end_i -= 1
+        if start_i + 1 < end_i:
+            tmp = lst[start_i+1]
+            lst[start_i+1] = lst[end_i]
+            lst[end_i] = tmp
+    return start_i
+```
+
+### 4.2. C
+
+```c
+void quick_sort(int lst[], int len) {
+    _quick_sort(lst, 0, len-1);
+}
+
+void _quick_sort(int lst[], int start_i, int end_i) {
+    if (start_i > end_i - 1) {
+        return;
+    }
+    int pvt = partition(lst, start_i, end_i);
+    _quick_sort(lst, start_i, pvt-1);
+    _quick_sort(lst, pvt+1, end_i);
+}
+
+int partition(int lst[], int start_i, int end_i) {
+    int pvt_i =  randint(start_i, end_i);
+    int pvt = lst[pvt_i];
+    lst[pvt_i] = lst[start_i];
+    lst[start_i] = pvt;
+    while (start_i < end_i) {
+        while (start_i < end_i && lst[start_i+1] <= pvt) {
+            start_i += 1;
+            lst[start_i-1] = lst[start_i];
+            lst[start_i] = pvt;
+        }
+        while (start_i < end_i && lst[end_i] >= pvt) {
+            end_i -= 1;
+        }
+        if (start_i + 1 < end_i) {
+            int tmp = lst[start_i + 1];
+            lst[start_i + 1] = lst[end_i];
+            lst[end_i] = tmp;
+        }
+    }
+    return start_i;
+}
+```
+
+(Sorry that I am not familiar with C memory management, so this code would have issues with large inputs.)
+
+### 4.3 Java
+
+```java
+import java.util.Random;
+
+class QuickSort {
+    public void sort(int[] arr) {
+        sort(arr, 0, arr.length-1);
+    }
+
+    private void sort(int[] arr, int startIdx, int endIdx) {
+        if (startIdx >= endIdx) {
+            return;
+        }
+        int pvtIdx = partition(arr, startIdx, endIdx);
+        sort(arr, startIdx, pvtIdx - 1);
+        sort(arr, pvtIdx + 1, endIdx);
+    }
+
+    private int partition(int[] arr, int startIdx, int endIdx) {
+        // randomly select the pvt
+        Random random = new Random();
+        int pvtIdx = startIdx + random.nextInt(endIdx - startIdx + 1);
+        // move the pvt to the start
+        int pvt = arr[pvtIdx];
+        arr[pvtIdx] = arr[startIdx];
+        arr[startIdx] = pvt;
+
+        // start the while loop
+        while (startIdx < endIdx) {
+            while ((startIdx < endIdx) && (arr[startIdx+ 1] <= pvt)) {
+                startIdx = startIdx + 1;
+                arr[startIdx - 1] = arr[startIdx];
+                arr[startIdx] = pvt; 
+            }
+            while ((startIdx < endIdx) && (arr[endIdx] >= pvt)) {
+                endIdx = endIdx - 1;
+            }
+            if (startIdx + 1 < endIdx) {
+                int tmp = arr[startIdx + 1];
+                arr[startIdx + 1] = arr[endIdx];
+                arr[endIdx] = tmp;
+            }
+        }
+        return startIdx;
+    }
+}
+```
+
+## 5. Duplicates
 
 Now it seems all good. But in the cases discussed above, we have not handled duplicates. What should we do with duplicates?
 
-### 4.1 Doing Nothing with Duplicates
+### 5.1 Doing Nothing with Duplicates
 
 In the steps described above, we have two indexes, the start index s and the end index e. In previous sections, we set the partition algorithm be such that if the number at s + 1 is less than pivot, we move s forward, and if the number at e is greater than pivot, we move e forward. **This will partition the array into 3 parts, the left part includes the numbers that are less than the pivot, the middle part is the pivot, and the right part includes the numbers that are greater than the pivot.**
 
@@ -232,6 +364,63 @@ in the list above,
 - c represents the begining of the finished part of the larger partition;
 - the part between b and c are the elements yet to be sorted. 
 
-## 5. Code Implementation
+## 6. Code Implementation (Optimized for Duplicates)
 
-**[To Be Completed]**
+### 6.1. Python Implementation 
+
+```python
+from random import Random
+
+def quick_sort(lst):
+    _quick_sort(lst, 0, len(lst) - 1)
+
+def _quick_sort(lst, start_i, end_i):
+    # checking invariant
+    assert 0 <= start_i and start_i <= end_i and end_i < len(lst), f"invariant not satisfied: {start_i} {end_i} {len(lst)}"
+    # base case
+    if start_i > end_i - 1:
+        return
+    # partitioning
+    pi, si = _partition(lst, start_i, end_i)
+    _quick_sort(lst, start_i, pi - 1 if pi - 1 >= start_i else start_i)
+    _quick_sort(lst, si, end_i)
+    
+def _partition(lst, start_i, end_i):
+    si = start_i
+    ei = end_i
+    # generate a random pivot point
+    pivot_i = Random().randint(si, ei)
+    # moving the pivot to the very front
+    pivot = lst[pivot_i]
+    lst[pivot_i] = lst[si]
+    lst[si] = pivot
+    # set the pivot_i index and the start_i index
+    pivot_i = si
+    si = si + 1
+    while si < ei:
+        # iterating from start
+        # after this step, 
+        # pivot_i should mark the start of the pivot segment 
+        # start_i should mark the end of the pivot segment
+        while (si < ei and lst[si] <= pivot):
+            if lst[si] == pivot:
+                si = si + 1
+                continue
+            lst[pivot_i] = lst[si]
+            lst[si] = pivot
+            pivot_i = pivot_i + 1
+            si = si + 1
+        # iterating from the end
+        while (si < ei and lst[ei] > pivot):
+            ei = ei - 1
+        # exchange the values
+        tmp = lst[si]
+        lst[si] = lst[ei]
+        lst[ei] = tmp
+    # finish the edge case
+    if lst[ei] < pivot:
+        lst[pivot_i] = lst[ei]
+        lst[ei] = pivot
+        pivot_i = pivot_i + 1
+    return pivot_i, si
+```
