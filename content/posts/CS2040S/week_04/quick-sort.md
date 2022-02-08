@@ -165,7 +165,72 @@ Because we know that the bases in logarithmic functions don't realy matter ($\lo
 
 ## 4. Duplicates
 
-**[To Be Completed]**
+Now it seems all good. But in the cases discussed above, we have not handled duplicates. What should we do with duplicates?
+
+### 4.1 Doing Nothing with Duplicates
+
+In the steps described above, we have two indexes, the start index s and the end index e. In previous sections, we set the partition algorithm be such that if the number at s + 1 is less than pivot, we move s forward, and if the number at e is greater than pivot, we move e forward. **This will partition the array into 3 parts, the left part includes the numbers that are less than the pivot, the middle part is the pivot, and the right part includes the numbers that are greater than the pivot.**
+
+One way of handling the duplicates is to modify this partition rule be such that we include the equal sign in either or both operations. **This way, depending on the situation, we could have numbers that are equal to the pivot be in either or both of the left and right part.** Suppose that we modify the partition algorithm be such that if the number at s+1 is less than or equal to the pivot, we move s forward, and if the number at e is greater than or equal to the pivot, we move e backward. 
+
+This way, we may end up with a partitioned array like this (if our pivot is 5):
+
+```plaintext
+1 2 5 3 4 5 7 9 5 10 5
+          ^
+        pivot
+```
+
+Therefore, if we look at the left-half of the array, we realize that all the numbers in the left-half of the array are less than or equal to the pivot. If we look at the right-half of the array, we realize that all the numbers in the right half of the array are greater than or equal to the array. 
+
+Now, what is the issue with this approach? Consider this very extreme case:
+
+```plaintext
+5 5 5 5 5 5 5 5 5 5
+```
+
+If we were to just ignore the pivot, the start index would end up in meeting the end index at the last element after the first partition:
+
+```plaintext
+5 5 5 5 5 5 5 5 5 5
+                s e
+```
+
+then, for the left partition of the list, this situation would happen again:
+
+```
+5 5 5 5 5 5 5 5 5
+              s e
+```
+
+this situation would go on and on and on, until we reach the first two elements:
+
+```
+5 5
+s e
+```
+
+the result of this algorithm? $O(n^{2})$. We'll never want this happen!
+
+### 4.2 Keeping the Pivots to a Separate Section
+
+What shall we do to prevent the happening of this situation then?
+
+Well, we could partition the array into three parts. The left part contains the numbers that are strictly smaller than the pivot, while the right part contains the numbers that are strictly larger than the pivot. The key here is the middle part. Instead of containing only one pivot point, we could modify it be such that it would contain all the numbers that is equal to the pivot. This way, we will no longer have to worry about the duplicated pivots!
+
+So, the way that this is implemented is by adding indexes to keep track of the pivots. Say that p represents the pivot number, s represents numbers that are smaller than the pivot, and l represents numbers that are larger than the pivot:
+
+```plaintext
+s s s p p p l s l p l l s p p l l l l
+    ^     ^                   ^
+    a     b                   c
+```
+
+in the list above, 
+- the index a represents the end of the end of the finished part of the smaller partition;
+- b represents the end of the finished part of the pivot partition;
+- c represents the begining of the finished part of the larger partition;
+- the part between b and c are the elements yet to be sorted. 
 
 ## 5. Code Implementation
 
