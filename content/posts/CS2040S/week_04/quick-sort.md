@@ -6,7 +6,7 @@ series: ["CS2040S"]
 tags: ["CS2040S", "Notes", "Data Structures", "Algorithms", "Sorting"]
 ---
 
-> I apologize for the poor quality of this article. To be honest, writing this article was a huge mess. I spent a lot of time writing the article, but then realized that I didn't really get the details right, or at least easy to be implemented in code. After spending hours debugging my code, I realized that quick sort is actually all about details. I will probably rewrite large portions of this article when I have more time, and explain the boundary conditions more clearly.
+> I apologize for the poor quality of this article. To be honest, writing this article was a huge mess. I spent a lot of time writing the article, but then I realized that I didn't really get the details right. The idea was correct, but I vaguely described the implementation. When I went on to write the code, I realized that quick sort is actually all about details. Vaguely understanding the idea of quicksort makes it hard to implement it correctly -- I spent hours debugging my code. I will probably rewrite large portions of this article when I have more time and explain the boundary conditions more clearly.
 
 ## 1. Idea Walkthrough
 
