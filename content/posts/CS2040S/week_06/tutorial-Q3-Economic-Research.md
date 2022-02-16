@@ -60,7 +60,7 @@ $$
 
 Therefore, the time complexity for finding the smallest group is $O(n)$. Since we are going to divide the list into $k$ groups, where $k$ will mostly be a small number relative to $n$, the time complexity for this solution is going to be $O(kn)$, which is smaller than the $O(n\log n)$ solution by just sorting out the array. 
 
-## $O(n\log k)$ Solution
+## 3. $O(n\log k)$ Solution
 
 The algorithm can be futher optimized to $O(n\log k)$.  
 
@@ -78,6 +78,6 @@ Because we know the target value, we can go through go though the list, find out
 
 We apply the solution that we discussed in the second section, which would take $O(n)$ to find out the first few elements that adds up to the target value. Because we are only considering the small section which has the length $n/k$, the time complexity for finding out the elements whose wealth add up to the target value in a single bucket costs $O(n/k)$. Because we have $k$ buckets, the resulting time complexity is $O(n)$.
 
-### 4. Conclusion
+### Conclusion
 
 Because we have three steps, the first step takes $O(n\log k)$, the second step takes $O(n)$, and the third step takes $O(n)$, the resulting time complexity should be $O(n)$.
