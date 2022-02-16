@@ -78,6 +78,6 @@ Because we know the target value, we can go through go though the list, find out
 
 We apply the solution that we discussed in the second section, which would take $O(n)$ to find out the first few elements that adds up to the target value. Because we are only considering the small section which has the length $n/k$, the time complexity for finding out the elements whose wealth add up to the target value in a single bucket costs $O(n/k)$. Because we have $k$ buckets, the resulting time complexity is $O(n)$.
 
-### Conclusion
+### 4. Conclusion
 
 Because we have three steps, the first step takes $O(n\log k)$, the second step takes $O(n)$, and the third step takes $O(n)$, the resulting time complexity should be $O(n)$.
