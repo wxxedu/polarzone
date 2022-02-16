@@ -83,7 +83,7 @@ To begin our partition, we shall be looking at the value at index $j$, which rep
 
 ### Termination Condition
 
-Recall in the [Denoting Partions](#Denoting%20Partions) section, we have divided the list into 4 segments, one of with is the unpartitioned segment, which starts at $j$ (inclusive) and ends at $k$. Therefore, if $j=k$, it would mean that the unpartitioned segment would have a length of $0$, which means that the entire list is partitioned. Therefore, we terminate the partitioning process. 
+Recall in the [Denoting Partions](#denoting-partions) section, we have divided the list into 4 segments, one of with is the unpartitioned segment, which starts at $j$ (inclusive) and ends at $k$. Therefore, if $j=k$, it would mean that the unpartitioned segment would have a length of $0$, which means that the entire list is partitioned. Therefore, we terminate the partitioning process. 
 
 ## Code Implementation
 
