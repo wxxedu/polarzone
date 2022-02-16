@@ -58,8 +58,9 @@ Now, let us denote the 4 segments in this list using indexes $i, j, k, l$, where
 Now, if we only look at the indexes, the list, at any stage of the partionting, shall look something like this:
 
 $$
-\underbrace{0,  \dots, i-1}_{<p},\underbrace{ i, \cdots, j-1}_{=p},\underbrace{ j, \cdots, k-1}_{\text{not partitioned}}, \underbrace{k, \cdots, l}_{>p}
+\underbrace{0,  \dots, i-1}\_{<p},\underbrace{ i, \cdots, j-1}\_{=p},\underbrace{ j, \cdots, k-1}\_{\text{not partitioned}}, \underbrace{k, \cdots, l}\_{>p}
 $$
+
 and the invariant shall always hold that
 
 $$0\leq i \leq j \leq k < l$$
