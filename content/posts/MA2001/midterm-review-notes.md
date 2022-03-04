@@ -60,7 +60,7 @@ tags: ["Linear Algebra"]
 	- If 1 row / column of the matrix is zero, then the determinant of the matrix is zero. 
 	- If two rows are proportional to each other, than the determinant of the matrix is zero. 
 	- For a diagonal matrix, the determinant of the matrix is the product of all the elements along its main diagonal axis. $\det({\textbf{A}})=\sum\limits^{n}\_{i=1}a\_{ii}$. 
-- If the determinant of the matrix $\textbf{A}$ is zero, then:
+- If the determinant of the matrix $\textbf{A}$ is **NOT ZERO**, then:
 	- $\textbf{A}$ is invertible;
 	- $\textbf{Ax}=\textbf{0}$ has only the trivial solution;
 	- $\textbf{Ax}=\textbf{b}$ has a unique solution;
