@@ -50,7 +50,7 @@ tags: ["Linear Algebra"]
 		- $M_{ij}$, the minor, is the **determinant** of the $(n-1)\times  (n-1)$ matrix that removes the $i^{\text{th}}$ row and $j^{\text{th}}$ column. 
 ## Determinants
 - The **determinant** of matrix $\textbf{A}$ is often denoted by $\det({\textbf{A}})$, or $|\textbf{A}|$.
-- The determinant for $(a)$ is $a$, the determinant for $\begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$ is $ac-bd$, and the determinant for $\begin{pmatrix}a & b & c \\\\ d & e & f \\\\ g & h & i\end{pmatrix}$ is $aei + bfg + cdh - ced - afh - bdi$. 
+- The determinant for $(a)$ is $a$, the determinant for $\begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$ is $ac-bd$, and the determinant for $\begin{pmatrix}a & b & c \\\\ d & e & f \\\\ g & h & i\end{pmatrix}$ is $aei + bfg + cdh - ceg - afh - bdi$. 
 - **Determinants** can be defined recursively. 
 	- To do this, we need to define the minor. Minor, $M_{ij}$, as mentioned above, is the determinant of the $(n-1)\times  (n-1)$ matrix that removes $i^{\text{th}}$ row and the $j^{th}$ column. For example, for the matrix $$\begin{pmatrix}a_{11} & a_{12} & a_{13}\\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33}\end{pmatrix}$$ $M_{11}$ would be: $$\begin{vmatrix}a_{22} & a_{23} \\\\ a_{32} & a_{33} \end{vmatrix}$$
 	- Then, we can find the determinant of a matrix by taking the $i^{\text{th}}$ row, and then use the following formula: $$\det({\textbf{A}})=\sum\limits^{n}_{j=1}(-1)^{i+j}M_{ij}$$
@@ -106,5 +106,6 @@ tags: ["Linear Algebra"]
 - Fixed the issue where I mistyped homogeneous as homologous;
 - Fixed the issue where I said that $\textbf{A}$ is invertible if $\textbf{AB}=\textbf{I}$, which shall be true for square matrices and is sufficient to prove invertibility. But for the sake of being more accurate, it should be that $\textbf{A}$ is invertible iff $\textbf{AB}=I$ and $\textbf{BA}=\textbf{I}$;
 - Fixed the issue where I mistyped the formula for finding the determinant for triangular matrices, where I typed $\det({\textbf{A}})=\sum\limits^{n}\_{i=1}a\_{ii}$ as opposed to $\det({\textbf{A}})=\prod\limits^{n}\_{i=1}a\_{ii}$;
+- Fixed the issue where I miss typed the determinant expansion for the 3 by 3 matrix.
 
 If you find more typos and small mistakes, please feel free to [email me](mailto:xiuxuan.wang@u.nus.edu). 
