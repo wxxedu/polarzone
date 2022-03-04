@@ -90,10 +90,10 @@ tags: ["Linear Algebra"]
 	- It is **not empty**: $\textbf{0} \in S$;
 	- **Addition** is contained: if $\textbf{u}, \textbf{v} \in S$, then $\textbf{u} + \textbf{v} \in S$;
 	- **Scalar multiplication** is contained: if $\textbf{u}\in S$, then $k\textbf{u}\in S, k \in \mathbb{R}$.
-- Note that the solution set of a **homologous system** is a subspace because it satisfies that:
+- Note that the solution set of a **homogeneous system** is a subspace because it satisfies that:
 	- $\textbf{0}\in S$
-	- If $\textbf{x}\_{0}$ is a solution to the homologous system $\textbf{Ax}=\textbf{0}$, then $\textbf{A}(k\textbf{x}\_{0})=k\textbf{0}=\textbf{0}$, then  $x\_{0}'=k\textbf{x}\_{0}$ is also a solution.
-	- If both $\textbf{x}\_{0}$ and $\textbf{x}\_{1}$ are solutions to the homologous system $\textbf{A}\textbf{x}=\textbf{0}$, then $\textbf{A}(\textbf{x}\_{0}+\textbf{x}\_{1})=\textbf{0}+\textbf{0}=\textbf{0}$, therefore $\textbf{x}\_{2}=\textbf{x}\_{0} + \textbf{x}\_{1}$ is also a solution. 
+	- If $\textbf{x}\_{0}$ is a solution to the homogeneous system $\textbf{Ax}=\textbf{0}$, then $\textbf{A}(k\textbf{x}\_{0})=k\textbf{0}=\textbf{0}$, then  $x\_{0}'=k\textbf{x}\_{0}$ is also a solution.
+	- If both $\textbf{x}\_{0}$ and $\textbf{x}\_{1}$ are solutions to the homogeneous system $\textbf{A}\textbf{x}=\textbf{0}$, then $\textbf{A}(\textbf{x}\_{0}+\textbf{x}\_{1})=\textbf{0}+\textbf{0}=\textbf{0}$, therefore $\textbf{x}\_{2}=\textbf{x}\_{0} + \textbf{x}\_{1}$ is also a solution. 
 - What is the **alternative definition** for **subspace**? (Used in abstract linear algebra)
 	- Let $V$ be an non-empty subset of $\mathbb{R}^{n}$, then $V$ is a subspace of $\mathbb{R}^{n}$ if and only if $$(\forall \textbf{u}, \textbf{v} \in V)(\forall c, d\in R)[c\textbf{u} + d\textbf{v} \in V]$$
 
