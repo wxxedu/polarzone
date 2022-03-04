@@ -59,7 +59,7 @@ tags: ["Linear Algebra"]
 	- $\begin{vmatrix}  a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \end{vmatrix} + \begin{vmatrix}  a'_{11} & a'_{12} & a'_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \end{vmatrix} = \begin{vmatrix}  a_{11} + a'_{11} & a_{12} +a'_{12} & a_{13} + a'_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \end{vmatrix}$
 	- If 1 row / column of the matrix is zero, then the determinant of the matrix is zero. 
 	- If two rows are proportional to each other, than the determinant of the matrix is zero. 
-	- For a diagonal matrix, the determinant of the matrix is the product of all the elements along its main diagonal axis. $\det({\textbf{A}})=\sum\limits^{n}_{i=1}a_{ii}$. 
+	- For a diagonal matrix, the determinant of the matrix is the product of all the elements along its main diagonal axis. $\det({\textbf{A}})=\sum\limits^{n}\_{i=1}a\_{ii}$. 
 - If the determinant of the matrix $\textbf{A}$ is zero, then:
 	- $\textbf{A}$ is invertible;
 	- $\textbf{Ax}=\textbf{0}$ has only the trivial solution;
