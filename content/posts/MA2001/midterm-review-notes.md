@@ -107,4 +107,4 @@ tags: ["Linear Algebra"]
 - Fixed the issue where I said that $\textbf{A}$ is invertible if $\textbf{AB}=\textbf{I}$, which shall be true for square matrices and is sufficient to prove invertibility. But for the sake of being more accurate, it should be that $\textbf{A}$ is invertible iff $\textbf{AB}=I$ and $\textbf{BA}=\textbf{I}$;
 - Fixed the issue where I mistyped the formula for finding the determinant for triangular matrices, where I typed $\det({\textbf{A}})=\sum\limits^{n}\_{i=1}a\_{ii}$ as opposed to $\det({\textbf{A}})=\prod\limits^{n}\_{i=1}a\_{ii}$;
 
-If you find more typos and small mistakes, please feel free to message me either directly (@xiuxuanwang) or in the telegram group for MA2001. Many thanks!
+If you find more typos and small mistakes, please feel free to [email me](mailto:xiuxuan.wang@u.nus.edu). 
