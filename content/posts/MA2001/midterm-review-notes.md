@@ -34,7 +34,7 @@ tags: ["Linear Algebra"]
 		- This corresponds to the pre-multiplication of the elementary matrix whose $(i, i)$-element is $k$ as opposed to $1$. 
 ## Invertible Matrices
 
-- A matrix $\textbf{A}$ is **invertible** if there exists another matrix $\textbf{B}$ such that $\textbf{A}\textbf{B}=\textbf{I}$. $\textbf{B}$ is $\textbf{A}$'s  inverse. We denote the inverse of $\textbf{A}$ as $\textbf{A}^{-1}$. 
+- A matrix $\textbf{A}$ is **invertible** if there exists another matrix $\textbf{B}$ such that $\textbf{A}\textbf{B}=\textbf{I}$ and $\textbf{B}\textbf{A}=\textbf{I}$. $\textbf{B}$ is $\textbf{A}$'s  inverse. We denote the inverse of $\textbf{A}$ as $\textbf{A}^{-1}$. 
 - When a matrix has an **inverse**, we say that it is **invertible**. When it has not, we say that it is **singular**. 
 - **\[Important\]** Let $\textbf{A}$ be a square matrix, and the following properties are equivalent:
 	- $\textbf{A}$ is an invertible matrix;
@@ -68,7 +68,7 @@ tags: ["Linear Algebra"]
 
 ## Matrix Calculations
 
-- Let $\textbf{A}=(a_{ij})_{m\times p}$ and $\textbf{B}=(b_{ij})_{p\times n}$. Then, $\textbf{A}\textbf{B}$ is a $m\times n$ matrix where the $(i,j)$-entry of the matrix is the product of the $i^{\text{th}}$ row of $\textbf{A}$ and the $j^{\text{th}}$ column of $\textbf{B}$. I.e. let $\textbf{AB}=(p_{ij})_{m\times n}$, then $$\begin{align*}p_{ij}&=a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots + a_{ip}b_{pi} \\\\ &=\sum\limits^{p}_{k=1}a_{ik}p_{kj}\end{align*}$$
+- Let $\textbf{A}=(a_{ij})_{m\times p}$ and $\textbf{B}=(b_{ij})_{p\times n}$. Then, $\textbf{A}\textbf{B}$ is a $m\times n$ matrix where the $(i,j)$-entry of the matrix is the product of the $i^{\text{th}}$ row of $\textbf{A}$ and the $j^{\text{th}}$ column of $\textbf{B}$. I.e. let $\textbf{AB}=(p_{ij})_{m\times n}$, then $$\begin{align*}p_{ij}&=a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots + a_{ip}b_{pj} \\\\ &=\sum\limits^{p}_{k=1}a_{ik}b_{kj}\end{align*}$$
 - Matrix Arithmetics ($\textbf{A}$, $\textbf{B}$, $\textbf{C}$ are square matrices of the same size)
 	- $\textbf{A}+\textbf{B} = \textbf{B} + \textbf{A}$;
 	- $\textbf{A}\cdot \textbf{B} \neq \textbf{B}\cdot\textbf{A}$ (In most cases);
@@ -97,3 +97,14 @@ tags: ["Linear Algebra"]
 - What is the **alternative definition** for **subspace**? (Used in abstract linear algebra)
 	- Let $V$ be an non-empty subset of $\mathbb{R}^{n}$, then $V$ is a subspace of $\mathbb{R}^{n}$ if and only if $$(\forall \textbf{u}, \textbf{v} \in V)(\forall c, d\in R)[c\textbf{u} + d\textbf{v} \in V]$$
 
+----
+
+## Change Log
+
+- Fixed issue where I mistyped "not zero" as "zero" right before the matrix calculations section;
+- Fixed issue where I mistyped the formula $$\begin{align*}p\_{ij}&=a\_{i1}b\_{1j}+a\_{i2}b\_{2j}+\cdots + a\_{ip}b\_{pj} \\ &=\sum\limits^{p}\_{k=1}a\_{ik}b\_{kj}\end{align*}$$
+- Fixed the issue where I mistyped homogeneous as homologous;
+- Fixed the issue where I said that $\textbf{A}$ is invertible if $\textbf{AB}=\textbf{I}$, which shall be true for square matrices and is sufficient to prove invertibility. But for the sake of being more accurate, it should be that $\textbf{A}$ is invertible iff $\textbf{AB}=I$ and $\textbf{BA}=\textbf{I}$;
+- Fixed the issue where I mistyped the formula for finding the determinant for triangular matrices, where I typed $\det({\textbf{A}})=\sum\limits^{n}\_{i=1}a\_{ii}$ as opposed to $\det({\textbf{A}})=\prod\limits^{n}\_{i=1}a\_{ii}$;
+
+If you find more typos and small mistakes, please feel free to message me either directly (@xiuxuanwang) or in the telegram group for MA2001. Many thanks!
