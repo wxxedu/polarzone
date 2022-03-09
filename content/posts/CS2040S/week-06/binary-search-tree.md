@@ -1,7 +1,9 @@
 ---
-title: "Binary Search Tree"
-date: 2022-03-09T15:58:07+08:00
-draft: true
+title: "Tutorial Q3 Economic Research"
+date: 2022-02-16T21:56:05+08:00
+draft: false
+series: ["CS2040S"]
+tags: ["CS2040S", "Notes", "Data Structures", "Algorithms", "Binary Search Tree", "Tree"]
 ---
 
 Recall that in binary search, we find the middle element of a list, compare the element that we want to find with the middle element, and then chooses to go to the left part of the list or the right part. A binary search tree is using a similar approach. The difference here is that in a binary search tree, we store the elements in a tree structure.
