@@ -1,6 +1,6 @@
 ---
-title: "Tutorial Q3 Economic Research"
-date: 2022-02-16T21:56:05+08:00
+title: "Binary Search Tree"
+date: 2022-03-09T15:58:07+08:00
 draft: false
 series: ["CS2040S"]
 tags: ["CS2040S", "Notes", "Data Structures", "Algorithms", "Binary Search Tree", "Tree"]
